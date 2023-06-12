@@ -131,8 +131,9 @@ Example:
 
 👤 **Yacoubou**
 
-- GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
-- LinkedIn: [yacoubou-Seidou](https://www.linkedin.com/in/yacoubou-seidou-chaibou/)
+- GitHub: [@kayembajonathan](https://github.com/KAYEMBAJONATHAN)
+- LinkedIn: [@kayembajonathan](https://www.linkedin.com/in/jonathan-kayembb56247236/)
+- Twitter: [@JonathanKa97287](@JonathanKa97287)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
