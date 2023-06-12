@@ -129,7 +129,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Yacoubou**
+👤 **Jonathan**
 
 - GitHub: [@kayembajonathan](https://github.com/KAYEMBAJONATHAN)
 - LinkedIn: [@kayembajonathan](https://www.linkedin.com/in/jonathan-kayembb56247236/)
