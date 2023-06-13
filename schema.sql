@@ -1,3 +1,5 @@
+CREATE DATABASE vetclinic;
+
 CREATE TABLE animals (
 id: integer
 name: string
