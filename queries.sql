@@ -24,6 +24,7 @@ BEGIN;
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 SAVEPOINT date_deletion;
 UPDATE animals SET weight_kg = weight_kg * (-1);
+SAVEPOINT date_deletion
 UPDATE animals SET weight_kg = weight_kg * (-1) WHERE (weight_kg < 0);
 COMMIT;
 SELECT COUNT(*) FROM animals;
