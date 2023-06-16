@@ -11,13 +11,6 @@ INSERT INTO animals (id,name,date_of_birth,escape_attempts,neutered,weight_kg)
         (10,'Blossom', '1998-10-13', 3 , true , 17),
         (11,'Ditto', '2022-05-14' , 4 , true , 22);
 
-ALTER TABLE animals ADD PRIMARY KEY (id);
-ALTER TABLE animals DROP COLUMN species;
-ALTER TABLE animals ADD COLUMN species_id INT;
-ALTER TABLE animals ADD COLUMN owners_id INT;
-ALTER TABLE animals ADD CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id);
-ALTER TABLE animals ADD CONSTRAINT fk_owners FOREIGN KEY (owners_id) REFERENCES owners(id);
-
 INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34);
 INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19);
 INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
@@ -27,12 +20,12 @@ INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
 INSERT INTO species (name) VALUES ('Pokemon');
 INSERT INTO species (name) VALUES ('Digimon');
 UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
-UPDATE animals SET species_id = 1 WHERE species_id ISNULL;
+UPDATE animals SET species_id = 1 WHERE species_id IS NULL;
 
 BEGIN;
 UPDATE animals SET owners_id = 1 WHERE name LIKE 'Agumon';
-UPDATE animals SET owners_id = 2 WHERE name IN ('Gabumon', 'Pikachu');
-UPDATE animals SET owners_id = 3 WHERE name IN ('Devimon', 'Plantmon');
-UPDATE animals SET owners_id = 4 WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
-UPDATE animals SET owners_id = 5 WHERE name IN ('Angemon', 'Boarmon');
+UPDATE animals SET owners_id = 3 WHERE name IN ('Gabumon', 'Pikachu');
+UPDATE animals SET owners_id = 4 WHERE name IN ('Devimon', 'Plantmon');
+UPDATE animals SET owners_id = 5 WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
+UPDATE animals SET owners_id = 6 WHERE name IN ('Angemon', 'Boarmon');
 SELECT * FROM animals;
