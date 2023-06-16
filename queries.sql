@@ -68,7 +68,6 @@ WHERE vets.name = 'Stephanie Mendez'
 AND visits.visit_date >= '2020-04-01'
 AND visits.visit_date <= '2020-08-30';
 
-
 SELECT animals.name AS Animal_Name, COUNT(visits.animal_id) AS Visit_Count FROM animals
 JOIN visits ON animals.id = visits.animal_id
 GROUP BY animals.name ORDER BY visit_count DESC LIMIT 1;
@@ -85,14 +84,12 @@ JOIN visits ON animals.id = visits.animal_id
 JOIN vets ON visits.vet_id = vets.id
 ORDER BY visits.visit_date DESC LIMIT 1;
 
-
 SELECT COUNT(*) AS visit_count
 FROM visits v
 JOIN vets ve ON ve.id = v.vet_id
 JOIN animals a ON a.id = v.animal_id
 LEFT JOIN specializations s ON s.vet_id = ve.id AND s.species_id = a.species_id
 WHERE s.vet_id IS NULL OR s.species_id IS NULL;
-
 
 SELECT species.name AS species, COUNT(species.id) AS visit_count
 FROM vets
